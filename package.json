@@ -6,13 +6,16 @@
   "author": "Sailesh Kasaju",
   "license": "MIT",
   "scripts": {
-    "dev":
-      "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
     "webpack": "webpack -wd",
     "test": "jest --watch"
   },
   "babel": {
-    "presets": ["react", "env", "stage-2"]
+    "presets": [
+      "react",
+      "env",
+      "stage-2"
+    ]
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
@@ -22,6 +25,7 @@
     "react-test-renderer": "^16.0.0"
   },
   "dependencies": {
+    "axios": "0.17.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",

@@ -14,7 +14,9 @@
     "build-webpack": "webpack -p",
     "build-node": "babel lib -d build --copy-files",
     "start":
-      "NODE_ENV=production NODE_PATH=./build pm2 start build/server.js -i max --name appProd"
+      "NODE_ENV=production NODE_PATH=./build PORT=80 node build/server.js",
+    "start-prod":
+      "NODE_ENV=production NODE_PATH=./build PORT=80 pm2 start build/server.js -i max --name appProd"
   },
   "babel": {
     "presets": [
